@@ -9,6 +9,8 @@ export function fetchWeather(city) {
   const url = `${ROOT_URL}&q=${city},us`;
   const request = axios.get(url);
 
+  console.log('Request:', request); //Just to show an example of a PROMISE payload. Not needed for functionality
+
   return {
     type: FETCH_WEATHER,
     payload: request
